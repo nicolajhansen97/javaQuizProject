@@ -2,6 +2,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Random;
 
+/**
+ * @author Nicolaj Hansen
+ * @version 1.0
+ * @date 12-11-2020
+ */
+
 public class main {
 
     static Scanner in = new Scanner(System.in);
@@ -21,6 +27,8 @@ public class main {
     static String[] questions = {"JAVA is an object-oriented programming language", "&& is an Unary Operator", ">= is an relational operator", "The Random Generator is 100% random", "If we declare int [ ] ar = {1,2,3,4,5,6}; The size of array ar is: 5", "A loop can run a specified amount of times", "A class can be transient", "The default statement of a switch is always executed", "A class is an abstract definition of an object", "Given the declaration: int[ ] ar = {1,2,3,4,5}; The value of ar[4]? is 4", "The size of a Char in Java is 16 bits", "The following statement: String word = \"abcde\"; for (int i = 0; i <4; i+=2) System.out.print(word[i]); will print out: Ac", "Inner classes can be defined within methods", "The following code: int num = 6.7; will make the number 6.7", "Java keywords are written in lowercase as well as uppercase", "You can compare a boolean to an Integer", "The keyword to create a object in Java is:  \"new\"", "An Applet is a java program that run through a web-browser", "Java only runs on Windows and Mac", "Modules gives you the leftover"}; //The questions
     static String[] answers = {"true", "false", "true", "false", "false", "true", "false", "false", "true", "false", "true", "true", "true", "false", "false", "false", "true", "true", "false", "true"}; //The answers to the question
 
+
+    //The main method which include a menu, that call the other methods, that is chosen by the game you want to play.
     public static void main(String[] args) {
 
         int gameOrNot = -1;
@@ -56,6 +64,7 @@ public class main {
         }
     }
 
+    //This is the generator for the questions. It's make an random question and store it in an ArrayList if it's used, so it cant be used again.
     public static void questionNumberGenerator() {
 
         while (true) {
@@ -71,6 +80,7 @@ public class main {
         }
     }
 
+    //The 2 player game, which calculate the points, and decides what player is on the turn.
     public static void twoPlayerGame() {
 
         while (true) {
@@ -125,6 +135,7 @@ public class main {
         }
     }
 
+    //The 3 player game, which calculate the points, and decides what player is on the turn.
     public static void treePlayerGame() {
 
         while (true) {
@@ -190,6 +201,7 @@ public class main {
         }
     }
 
+    //The 4 player game, which calculate the points, and decides what player is on the turn.
     public static void fourPlayerGame() {
 
         while (true) {
@@ -268,6 +280,7 @@ public class main {
         }
     }
 
+    //Shows the rank list for the 2 players game
     public static void winnerTwoPlayer() {
 
         System.out.println("*--------------------------------------------------------*");
@@ -291,6 +304,7 @@ public class main {
         questionUsed.clear();
     }
 
+    //Shows the rank list for the 3 players game
     public static void winnerTreePlayer() {
 
         System.out.println("*--------------------------------------------------------*");
@@ -328,6 +342,7 @@ public class main {
         questionUsed.clear();
     }
 
+    //Shows the rank list for the 4 players game
     public static void winnerFourPlayer() {
         System.out.println("*--------------------------------------------------------*");
         System.out.println("|Player one you ended with " + playerOnePoint + " points!                     |");
